@@ -1,14 +1,19 @@
-import React, { Component } from 'react';
+import React, { createContext } from 'react';
 import { Text, View } from 'react-native';
 import Weather from './src/containers/Weather'
+import Form from './src/containers/Form';
 
-export default class HelloWorldApp extends Component {
-  render() {
-    return (
-      // <View style={{ flex: 1, justifyContent: "center", alignItems: "center" }}>
-      //   <Text>Hello, world!</Text>
-      // </View>
+const weather = {
+
+}
+
+const weatherContext = createContext(weather)
+
+export default function WeatherApp() {
+  return (
+    <View>
+      <Form />
       <Weather />
-    );
-  }
+    </View>
+  );
 }
